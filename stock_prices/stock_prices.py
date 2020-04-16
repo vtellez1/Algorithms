@@ -19,8 +19,6 @@ import argparse
 
 # So what if we kept track of the `current_min_price_so_far` and the `max_profit_so_far`?
 
-priceNums = [100, 55, 4, 98, 10, 18, 90, 95, 43, 11, 47, 67, 89, 42, 49, 79]
-
 
 def find_max_profit(prices):
     max_profit_so_far = prices[1] - prices[0]
@@ -33,29 +31,6 @@ def find_max_profit(prices):
 
     return max_profit_so_far
 
-
-print(find_max_profit(priceNums))
-
-"""
-def find_max_profit(prices):
-    current_min_price_so_far = prices[0]
-    max_profit_so_far = prices[1]
-    max_profit = max_profit_so_far - current_min_price_so_far
-
-    for i in range(0, len(prices)-1):
-        print(max_profit_so_far, current_min_price_so_far)
-        for x in range(1, len(prices)-1):
-            if x > i:
-                if prices[x] < current_min_price_so_far:
-                    current_min_price_so_far = prices[x]
-                elif prices[x] > max_profit_so_far:
-                    max_profit_so_far = prices[x]
-    print(max_profit_so_far, current_min_price_so_far)
-
-    max_profit = max_profit_so_far - current_min_price_so_far
-
-    return max_profit
-"""
 
 if __name__ == '__main__':
     # This is just some code to accept inputs from the command line
